@@ -72,9 +72,13 @@ public class AttendanceService : IAttendanceService
     public PaginatedList<AttendanceRecord> GetPaged(int pageNumber, int pageSize)
     {
         if (pageNumber < 1) pageNumber = 1;
-        if (pageSize < 1) pageSize = 10;
 
         var totalCount = _records.Count;
+
+        // pageSize == 0 means "All" — return everything on a single page
+        if (pageSize <= 0)
+            return new PaginatedList<AttendanceRecord>(_records, totalCount, 1, totalCount);
+
         var items = _records
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize);

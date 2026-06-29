@@ -5,11 +5,8 @@
 }
 
 <div class="card shadow-sm">
-    <div class="card-header bg-primary text-white d-flex align-items-center justify-content-between">
+    <div class="card-header bg-primary text-white">
         <h3 class="mb-0">Attendance List</h3>
-        <span class="badge bg-light text-primary fs-6">
-            @Model.TotalCount records &nbsp;|&nbsp; Page @Model.PageNumber of @Model.TotalPages
-        </span>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -77,6 +74,17 @@
                             {
                                 <option value="@size">@size</option>
                             }
+                        }
+                        @{
+                            bool allSelected = Model.PageSize <= 0 || Model.PageSize >= Model.TotalCount;
+                        }
+                        @if (allSelected)
+                        {
+                            <option value="0" selected>All</option>
+                        }
+                        else
+                        {
+                            <option value="0">All</option>
                         }
                     </select>
                     <input type="hidden" name="page" value="1" />

@@ -94,3 +94,4 @@ D:\User_Data_BK\C# Project\ByteCodeTest\AttendanceList\obj\Debug\net9.0\refint\A
 D:\User_Data_BK\C# Project\ByteCodeTest\AttendanceList\obj\Debug\net9.0\AttendanceList.pdb
 D:\User_Data_BK\C# Project\ByteCodeTest\AttendanceList\obj\Debug\net9.0\AttendanceList.genruntimeconfig.cache
 D:\User_Data_BK\C# Project\ByteCodeTest\AttendanceList\obj\Debug\net9.0\ref\AttendanceList.dll
+D:\User_Data_BK\C# Project\ByteCodeTest\AttendanceList\obj\Debug\net9.0\AttendanceList.sourcelink.json
